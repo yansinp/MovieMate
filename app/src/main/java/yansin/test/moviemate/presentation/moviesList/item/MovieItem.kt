@@ -32,7 +32,9 @@ import yansin.test.moviemate.domain.model.Movies
 fun MovieItem(item: Movies, onItemClick: (String) -> Unit) {
     Timber.tag("MoviesData").d("item.movieTitle: ${item.movieTitle}")
     if (item.movieTitle.isNotEmpty()) {
+
         Surface(
+
             modifier = Modifier
                 .clickable {
                     onItemClick.invoke(item.movieId)
